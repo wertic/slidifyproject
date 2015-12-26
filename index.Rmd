@@ -1,0 +1,65 @@
+---
+title       : Developing Data Products class project
+subtitle    : Playing with Slidify
+author      : Elena Chernousova
+job         : QA Manager
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [bootstrap, quiz]  # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+--- 
+
+## Presentation agenda
+
+The presentation has been created as a part of Developing Data Products class project to exsercise 
+gained skills and knowledge in creating the products ready to be distributed and reuse for general audience. The fisrt part of the class project is creating the app using Shiny and the second is applying Slidify to create a presentation which is going to be give a persation of Shiny app. 
+
+--- .class #id 
+
+## The description of the app 
+
+1. The app is created to do prediction of mpg based on Mtcars dataset. 
+2. UI elements include: tabs, panels, checkboxes, sliders, histograms. 
+3. Linear model is hidden and it calculates the outcome very quickly.  
+
+The app is available here:  https://wertic.shinyapps.io/Mtcars_dataproduct
+
+--- .class #id 
+
+## Visial representation
+
+<div style='text-align: center;'>
+    <img height='560' src='assets/img/UI.png'/>
+</div>
+
+--- .class #id 
+
+## Linear model 
+```{r}   
+    model <- lm(mpg~cyl+wt+hp, data = mtcars)
+    summary(model)
+```
+
+--- &radio
+## Fun quiz
+
+What could be done to improve the app? 
+
+1. _More attrcative design_
+2. Put more effort in data organizination
+3. Create more advanced model for prediction
+4. Add more description for each step of the reseach  
+
+*** .hint
+Shiny allows to customize design for the web-app. 
+
+*** .explanation
+Knowning shiny give advantage in creating real web-app with interactive design. However, it does not require advanced skiils in R.      
+
+--- .class #id 
+
+## Thanks for attention!
+
+
